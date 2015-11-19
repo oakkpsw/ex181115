@@ -43,8 +43,8 @@ public class PlayerController : MonoBehaviour {
 
 		speed = 0.0f;
 		moveSpeed = 1.0f;
-		jumpSpeed = 4.0f;
-		rotationSpeed = 8.0f;
+		jumpSpeed = 2.0f;
+		rotationSpeed = 2.0f;
 		onGround = false;
 		aiming = true;
 	}
@@ -100,6 +100,7 @@ public class PlayerController : MonoBehaviour {
 	
 		if(jump && onGround && speed <= 0.1f){
 			playerAnimator.SetBool("jump",true);
+
 			playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x,jumpSpeed,playerRigidbody.velocity.z);
 		}else{
 			playerAnimator.SetBool("jump",false);

@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{5709A41B-B135-E677-0355-CF8073D4BF5F}</ProjectGuid>
+	<ProjectGuid>{A85D7C49-8575-8568-2CF6-0617B928F016}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -48,7 +48,6 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Pendulum.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\R.cs" />
      <Compile Include="Assets\Scripts\RobotController.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
