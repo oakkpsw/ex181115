@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
-	int health;
+	public int health;
 	int maxHealth;
 
 	bool isDead;
@@ -12,9 +12,9 @@ public class PlayerHealth : MonoBehaviour {
 	public GameObject Life3;
 
 	void Start () {
-		maxHealth = 3;
+		maxHealth = 10;
 		//health = maxHealth;
-		health = 3;
+		health = 10;
 		isDead = false;
 	}
 	
@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour {
 	public void GetDamage(int damage){
 		Debug.Log("dam"); 
 		health -= damage; // HP--;
-		setHPbar();
+	
 
 		if(health <= 0 && !isDead){
 			Die();
@@ -43,30 +43,14 @@ public class PlayerHealth : MonoBehaviour {
 		if(health >= maxHealth){
 			health = maxHealth;
 		}
-		setHPbar();
+
 		
 	}
 
-	public void setHPbar(){
-		if (health == 3) {
-			Life1.SetActive (true);
-			Life2.SetActive (true);
-			Life3.SetActive (true);
-		} else if (health == 2) {
-			Life1.SetActive (true);
-			Life2.SetActive (true);
-			Life3.SetActive (false);
-		} else if (health == 1) {
-			Life1.SetActive (true);
-			Life2.SetActive (false);
-			Life3.SetActive (false);
-		}
-	}
+
 
 	void Die(){
-			Life1.SetActive (false);
-			Life2.SetActive (false);
-			Life3.SetActive (false);
+			
 			
 		
 		Destroy(gameObject);

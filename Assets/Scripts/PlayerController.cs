@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour {
 
 		speed = 0.0f;
 		moveSpeed = 1.0f;
-		jumpSpeed = 20.0f;
+		jumpSpeed = 10.0f;
 		rotationSpeed = 2.0f;
 		onGround = false;
 		aiming = true;
@@ -52,7 +52,6 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
 		CheckGround();
-
 
 		float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis("Vertical");
@@ -96,7 +95,7 @@ public class PlayerController : MonoBehaviour {
 
 		playerAnimator.SetFloat("speed",speed);
 	
-		Debug.Log (jump);
+
 	
 		/*if(jump && onGround && speed <= 0.1f){
 			playerAnimator.SetBool("jump",true);
@@ -113,6 +112,7 @@ public class PlayerController : MonoBehaviour {
 			playerAnimator.SetBool("jump",false);
 		}
 
+		Debug.Log (jumpSpeed);
 
 		if(speed != 0.0f){
 

@@ -9,12 +9,17 @@ public class Pendulum : MonoBehaviour
 	public float speed = 1.5f;
 	Quaternion qStart, qEnd;
 	private float startTime;	
+
+
+
+
 	
 	void Start () 
 	{
 		qStart = PendulumRotation (angle);
 		qEnd = PendulumRotation (-angle);
-		
+
+
 
 	}
 
@@ -37,5 +42,8 @@ public class Pendulum : MonoBehaviour
 		rot.eulerAngles = new Vector3 (rot.eulerAngles.x, rot.eulerAngles.y, zAngle);
 		return rot;
 	}
+
+
+
 }
 

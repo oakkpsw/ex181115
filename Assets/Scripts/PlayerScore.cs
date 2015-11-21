@@ -20,6 +20,10 @@ public class PlayerScore : MonoBehaviour {
 	public void AddScore(int boost){
 		
 		score += boost;
+		if (score >= 35 ) {
+			Application.LoadLevel(Application.loadedLevel); // load same level
+
+		}
 
 		
 	}

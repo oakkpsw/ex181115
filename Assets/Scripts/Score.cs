@@ -8,6 +8,7 @@ public class Score : MonoBehaviour {
 	public GameObject player;
 	
 	void Start () {
+		score = 0;
 		player = GameObject.FindWithTag("Player");
 		txt = gameObject.GetComponent<Text>(); 
 		txt.text = "Score :  " + score;
