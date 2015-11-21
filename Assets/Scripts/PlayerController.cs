@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour {
 
 		playerAnimator.SetFloat("speed",speed);
 	
-
+		Debug.Log (jump);
 	
 		/*if(jump && onGround && speed <= 0.1f){
 			playerAnimator.SetBool("jump",true);
@@ -108,7 +108,6 @@ public class PlayerController : MonoBehaviour {
 	
 		if(jump && onGround ){
 			playerAnimator.SetBool("jump",true);
-			Debug.Log (onGround);
 			playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x,jumpSpeed,playerRigidbody.velocity.z);
 		}else{
 			playerAnimator.SetBool("jump",false);
