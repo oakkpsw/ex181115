@@ -8,7 +8,7 @@ public class PlayerScore : MonoBehaviour {
 	public int score;
 
 	void Start () {
-		score = 5;
+		score = 0;
 	}
 	
 	// Update is called once per frame
