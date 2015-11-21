@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour {
 			playerAnimator.SetBool("jump",false);
 		}
 
-		Debug.Log (jumpSpeed);
+
 
 		if(speed != 0.0f){
 
