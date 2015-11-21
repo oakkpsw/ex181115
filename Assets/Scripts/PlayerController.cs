@@ -4,7 +4,6 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
 
-
 	Animator playerAnimator;
 
 
@@ -43,7 +42,7 @@ public class PlayerController : MonoBehaviour {
 
 		speed = 0.0f;
 		moveSpeed = 1.0f;
-		jumpSpeed = 2.0f;
+		jumpSpeed = 20.0f;
 		rotationSpeed = 2.0f;
 		onGround = false;
 		aiming = true;
@@ -96,11 +95,20 @@ public class PlayerController : MonoBehaviour {
 		//Debug.LogError("h = " + h + " v = " + v + " speed = " + speed + " moveSpeed : " + moveSpeed + " jump: " + jump);
 
 		playerAnimator.SetFloat("speed",speed);
+	
 
 	
-		if(jump && onGround && speed <= 0.1f){
+		/*if(jump && onGround && speed <= 0.1f){
 			playerAnimator.SetBool("jump",true);
-
+			Debug.Log (onGround);
+			playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x,jumpSpeed,playerRigidbody.velocity.z);
+		}else{
+			playerAnimator.SetBool("jump",false);
+		}*/
+	
+		if(jump && onGround ){
+			playerAnimator.SetBool("jump",true);
+			Debug.Log (onGround);
 			playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x,jumpSpeed,playerRigidbody.velocity.z);
 		}else{
 			playerAnimator.SetBool("jump",false);
